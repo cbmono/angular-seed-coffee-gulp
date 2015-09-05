@@ -48,6 +48,6 @@ gulp.task('serve', ->
     #'build:local'
     'connect'
 
-    [ 'open:local', 'watch' ]   # This runs in parallel
+    [ 'open:local' ] #, 'watch' ]   # This runs in parallel
   )
 )

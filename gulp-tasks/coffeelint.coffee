@@ -3,11 +3,10 @@
 #
 _  = require('lodash')
 runSequence = require('run-sequence')
+config = require('../gulp.config')
 
 gulp = require('gulp')
 coffeelint  = require('gulp-coffeelint')
-
-config = require('../gulp.config')
 
 #
 # Tasks
