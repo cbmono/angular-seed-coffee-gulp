@@ -1,3 +1,6 @@
+#
+# Dependencies
+#
 runSequence = require('run-sequence')
 
 #
