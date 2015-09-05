@@ -1,24 +1,25 @@
 module.exports = {
   # Source paths
   paths: {
-    gulpfile: 'gulpfile.coffee'
-
+    gulpfile:   'gulpfile.coffee'
+    htmls:      'app/**/*.html'
+    images:     'app/img/**/*'
+    sass:       'app/**/*.sass'
     scripts: [
-      'app/**/*.coffee'
-      '!app/**/*.spec.coffee'
+                'app/**/*.coffee'
+                '!app/**/*.spec.coffee'
     ]
-
-    htmls: 'app/**/*.html'
-
-    images: 'app/img/**/*'
   }
 
   # Destination compiled files
   dest: {
     local: {
-      scripts: 'builds/local/js'
-      htmls: 'builds/local/partials'
-      images: 'builds/local/img'
+      main:     'builds/local'
+
+      css:      'builds/local/css'
+      htmls:    'builds/local/partials'
+      images:   'builds/local/img'
+      scripts:  'builds/local/js'
     }
   }
 }

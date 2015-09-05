@@ -1,7 +1,39 @@
-logs/*
-!.gitkeep
-node_modules/
-bower_components/
-tmp
+#
+# Mac
+#
 .DS_Store
-.idea
+
+#
+# Git
+#
+!.gitkeep
+
+#
+# Nodejs
+#
+npm-debug.log
+node_modules
+logs
+tmp
+
+#
+# Intellij
+#
+.idea/
+*.iml
+*.iws
+
+#
+# Test
+#
+nohup.out
+
+#
+# Project stuff
+#
+.sass-cache
+bower_components/
+builds/*
+dest/
+*.swp
+*.db

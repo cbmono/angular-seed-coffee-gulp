@@ -1,22 +1,15 @@
 #
 # Dependencies
 #
-del = require('del')
 open  = require('open')
 requireDir = require('require-dir')
 runSequence = require('run-sequence')
 
 gulp = require('gulp')
-coffee = require('gulp-coffee')
-concat = require('gulp-concat')
 connect = require('gulp-connect')
-uglify = require('gulp-uglify')
-imagemin = require('gulp-imagemin')
-sourcemaps = require('gulp-sourcemaps')
-ngClassify = require('gulp-ng-classify')
 
 #
-# Tasks
+# Custom Tasks
 #
 tasks = requireDir('./gulp-tasks')
 

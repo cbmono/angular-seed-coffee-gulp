@@ -11,7 +11,7 @@ gulp = require('gulp')
 #
 gulp.task('build:local', (done) ->
   runSequence(
-    # 'clean:local_files',
+    'clean:local_files',
     # 'clean:dest',
     # 'copy:local',
     #
