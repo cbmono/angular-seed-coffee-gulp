@@ -1,6 +1,11 @@
 #
 # Dependencies
 #
+del = require('del')
+open  = require('open')
+requireDir = require('require-dir')
+runSequence = require('run-sequence')
+
 gulp = require('gulp')
 coffee = require('gulp-coffee')
 concat = require('gulp-concat')
@@ -10,58 +15,16 @@ imagemin = require('gulp-imagemin')
 sourcemaps = require('gulp-sourcemaps')
 ngClassify = require('gulp-ng-classify')
 
-del = require('del')
-open  = require('open')
-requireDir = require('require-dir')
-runSequence = require('run-sequence')
-
-
 #
-# Config
+# Tasks
 #
-paths = {
-  scripts: [
-    'client/js/**/*.coffee', '!client/external/**/*.coffee'
-  ]
-  images: 'client/img/**/*'
-};
-
 tasks = requireDir('./gulp_tasks')
 
 
+# https://github.com/gulpjs/gulp#incremental-builds
 
 
 
-#
-# Build local
-#
-gulp.task('build:local', (done) ->
-  runSequence(
-    # 'clean:local_files',
-    # 'clean:dest',
-    # 'copy:local',
-    #
-    # 'html2js:local',
-    # 'ngClassify',
-    # 'coffee:local',
-    # 'concat:local_libs',
-    # 'concat:local_main_libs',
-    #
-    # 'fetch-translation:local',
-    #
-    # 'compass:local',
-    # 'concat:local_css',
-    # 'clean:local_css',
-    #
-    # 'replace:local',
-
-    done
-  )
-
-  runSequence(
-    'coffeelint'
-  )
-)
 
 
 #########################################################

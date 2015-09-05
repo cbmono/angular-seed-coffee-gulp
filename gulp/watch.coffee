@@ -1,18 +1,21 @@
 #
 # Dependencies
 #
-gulp = require('gulp')
-watch = require('gulp-watch')
-
 _  = require('lodash')
 runSequence = require('run-sequence')
+
+gulp = require('gulp')
+watch = require('gulp-watch')
 
 
 #
 # Tasks
 #
 gulp.task('watch', ->
+
+  #
   # Watch Coffee and HTML files
+  #
   gulp.watch([
     'app/**/*.coffee'
     'app/**/*.html'
@@ -25,23 +28,27 @@ gulp.task('watch', ->
     )
   )
 
+  #
   # Watch only CoffeeScript files
+  #
   gulp.watch([
     'app/**/*.coffee'
   ], _.debounce( ->
     runSequence('coffeelint')
   , 6000))
 
-  # Watch .sass files
-  # gulp.watch([
-  #   'app/**/*.sass'
-  #   'app/**/*.html'
-  # ], ->
-  #   runSequence(
-  #     'compass:local'
-  #     'concat:local_css'
-  #     'clean:local_css'
-  #     'copy:local'
-  #   )
-  # )
+  #
+  # Watch SASS files
+  #
+  gulp.watch([
+    'app/**/*.sass'
+    'app/**/*.html'
+  ], ->
+    runSequence(
+      'compass:local'
+      'concat:local_css'
+      'clean:local_css'
+      'copy:local'
+    )
+  )
 )
