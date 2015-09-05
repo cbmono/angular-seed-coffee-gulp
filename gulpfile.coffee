@@ -18,13 +18,7 @@ ngClassify = require('gulp-ng-classify')
 #
 # Tasks
 #
-tasks = requireDir('./gulp_tasks')
-
-
-# https://github.com/gulpjs/gulp#incremental-builds
-
-
-
+tasks = requireDir('./gulp-tasks')
 
 
 #########################################################
@@ -32,6 +26,8 @@ tasks = requireDir('./gulp_tasks')
 # Run local server, open browser and watch files changes
 #
 #########################################################
+
+# https://github.com/gulpjs/gulp#incremental-builds
 
 # Create a local server
 gulp.task('connect', ->

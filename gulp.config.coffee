@@ -1,6 +1,14 @@
-export.module = {
-  scripts: [
-    'client/js/**/*.coffee', '!client/external/**/*.coffee'
-  ]
-  images: 'client/img/**/*'
-};
+module.exports = {
+  paths: {
+    gulpfile: 'gulpfile.coffee'
+
+    scripts: [
+      'app/**/*.coffee'
+      # '!client/external/**/*.coffee'
+    ]
+
+    htmls: 'app/**/*.html'
+
+    images: 'app/img/**/*'
+  }
+}

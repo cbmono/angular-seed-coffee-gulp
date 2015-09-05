@@ -3,6 +3,11 @@
 #
 runSequence = require('run-sequence')
 
+gulp = require('gulp')
+
+config = require('../gulp.config')
+
+
 #
 # Local
 #
@@ -14,7 +19,7 @@ gulp.task('build:local', (done) ->
     #
     # 'html2js:local',
     # 'ngClassify',
-    # 'coffee:local',
+    'coffee:local',
     # 'concat:local_libs',
     # 'concat:local_main_libs',
     #
