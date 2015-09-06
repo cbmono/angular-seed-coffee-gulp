@@ -1,14 +1,11 @@
-# angular-seed — the seed for AngularJS apps
+# angular-seed + Gulp + Coffeescript
 
-This project is an application skeleton for a typical [AngularJS](http://angularjs.org/) web app.
-You can use it to quickly bootstrap your angular webapp projects and dev environment for these
-projects.
+This project is based on the official [Angular Seed](angular_seed) repo and can be used as an application skeleton for a typical [AngularJS](http://angularjs.org/) web app.
+
+The main difference is the addition of [Gulp](gulp) to run compiling tasks and support for [Coffeescript](coffeescript) as development language.
 
 The seed contains a sample AngularJS application and is preconfigured to install the Angular
 framework and a bunch of development and testing tools for instant web development gratification.
-
-The seed app doesn't do much, just shows how to wire two controllers and views together.
-
 
 ## Getting Started
 
@@ -282,10 +279,6 @@ If you run this, you will get a cloned version of this repo to start working on 
 along with a CI service (in Jenkins) hosted that will run unit and end to end tests in both Firefox and Chrome.
 
 
-## Contact
-
-For more information on AngularJS please check out http://angularjs.org/
-
 [git]: http://git-scm.com/
 [bower]: http://bower.io
 [npm]: https://www.npmjs.org/
@@ -295,3 +288,6 @@ For more information on AngularJS please check out http://angularjs.org/
 [karma]: http://karma-runner.github.io
 [travis]: https://travis-ci.org/
 [http-server]: https://github.com/nodeapps/http-server
+[angular_seed]: https://github.com/angular/angular-seed
+[gulp]: http://gulpjs.com/
+[coffeescript]: http://coffeescript.org/
