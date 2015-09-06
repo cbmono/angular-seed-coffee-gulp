@@ -15,7 +15,7 @@ gulp.task('build:local', (done) ->
     # 'clean:dest',
     # 'copy:local',
     #
-    # 'html2js:local',
+
     # 'ngClassify',
     'coffee:local',
     # 'concat:local_libs',

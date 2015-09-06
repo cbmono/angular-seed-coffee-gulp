@@ -11,7 +11,6 @@ coffee = require('gulp-coffee')
 sourcemaps = require('gulp-sourcemaps')
 
 #
-# Tasks
 # Compile Coffeescript files and concatenate them
 #
 gulp.task('coffee:local', ->
