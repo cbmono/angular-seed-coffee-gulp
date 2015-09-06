@@ -2,12 +2,12 @@ module.exports = {
   # Source paths/files
   paths: {
     gulpfile:   'gulpfile.coffee'
-    htmls:      'app/**/*.html'
+    htmls:      'app/src/**/*.html'
     images:     'app/img/**/*'
-    sass:       'app/**/*.sass'
+    sass:       'app/src/**/*.sass'
     scripts: [
-                'app/**/*.coffee'
-                '!app/**/*.spec.coffee'
+                'app/src/**/*.coffee'
+                '!app/src/**/*.spec.coffee'
     ]
   }
 

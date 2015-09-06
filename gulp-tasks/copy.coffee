@@ -1,6 +1,7 @@
 #
 # Dependencies
 #
+mergeStream = require('merge-stream')
 config = require('../gulp.config')
 
 gulp = require('gulp')
@@ -11,12 +12,13 @@ gulp = require('gulp')
 gulp.task('copy:local', ->
   # Images
   img = gulp
-          .src(config.paths.images, { base: 'app/' })
-          .pipe(gulp.dest(config.dest.local.main))
+    .src(config.paths.images, { base: 'app/' })
+    .pipe(gulp.dest(config.dest.local.main))
 
   # HTML partials
-  html = gulp.src(config.paths.html, { base: 'app/src/' })
-             .pipe(gulp.dest(config.dest.local.htmls))
+  html = gulp
+    .src(config.paths.htmls, { base: 'app/src/' })
+    .pipe(gulp.dest(config.dest.local.htmls))
 
   #
   # ASYNC - we have to wait until everything is done

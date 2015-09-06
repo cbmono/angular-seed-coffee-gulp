@@ -25,7 +25,7 @@ gulp.task('clean:local_css', ->
 )
 
 gulp.task('clean:local_files', ->
-  del.sync(config.dest.local.main)
+  del.sync(config.dest.local.main + '/*')
 )
 
 # gulp.task('clean:production_css', ->
