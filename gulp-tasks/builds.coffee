@@ -16,6 +16,7 @@ gulp.task('build:local', (done) ->
     'copy:local',
 
     # Coffee & JS libs
+    'concat:local_js_libs'
     # 'ngClassify',
     'coffee:local',
 

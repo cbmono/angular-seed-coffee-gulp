@@ -15,6 +15,20 @@ module.exports = {
     ]
   }
 
+  # External libraries
+  libs: {
+    local: {
+      css: [
+        'app/bower_components/html5-boilerplate/dist/css/normalize.css'
+        'app/bower_components/html5-boilerplate/dist/css/main.css'
+      ]
+      js: [
+        'app/bower_components/angular/angular.js'
+        'app/bower_components/angular-route/angular-route.js'
+      ]
+    }
+  }
+
   # Destination compiled files
   dest: {
     local: {
