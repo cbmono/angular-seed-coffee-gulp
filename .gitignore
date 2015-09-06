@@ -34,6 +34,5 @@ nohup.out
 .sass-cache
 bower_components/
 builds/*
-dest/
 *.swp
 *.db

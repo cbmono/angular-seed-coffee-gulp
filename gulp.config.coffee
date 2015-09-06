@@ -4,7 +4,11 @@ module.exports = {
     gulpfile:   'gulpfile.coffee'
     htmls:      'app/src/**/*.html'
     images:     'app/img/**/*'
-    sass:       'app/src/**/*.sass'
+    sass: [
+                'app/src/**/*.sass'
+                '!app/src/app.sass'
+          ]
+    sass_main:  'app/src/app.sass'
     scripts: [
                 'app/src/**/*.coffee'
                 '!app/src/**/*.spec.coffee'

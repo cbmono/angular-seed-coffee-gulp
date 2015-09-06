@@ -11,22 +11,19 @@ gulp = require('gulp')
 #
 gulp.task('build:local', (done) ->
   runSequence(
+    # Remove old files and copy new ones
     'clean:local_files',
-    # 'clean:dest',
     'copy:local',
-    #
 
+    # Coffee & JS libs
     # 'ngClassify',
     'coffee:local',
-    # 'concat:local_libs',
-    # 'concat:local_main_libs',
-    #
-    # 'fetch-translation:local',
-    #
-    # 'compass:local',
-    # 'concat:local_css',
-    # 'clean:local_css',
-    #
+
+    # Sass & CSS libs
+    'compass:local',
+    'concat:local_css_libs'
+
+    # index.html
     # 'replace:local',
 
     done
