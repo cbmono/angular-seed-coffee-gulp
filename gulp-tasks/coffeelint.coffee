@@ -2,15 +2,13 @@
 # Dependencies
 #
 _  = require('lodash')
-runSequence = require('run-sequence')
 config = require('../gulp.config')
 
 gulp = require('gulp')
-coffeelint  = require('gulp-coffeelint')
+coffeelint = require('gulp-coffeelint')
 
 #
-# Tasks
-# Lint coffeescript (check if code fits best practice)
+# Lint coffeescript files
 #
 gulp.task('coffeelint', ->
   gulp

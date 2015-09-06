@@ -10,6 +10,8 @@ sourcemaps  = require('gulp-sourcemaps')
 #
 # Compass (create css from sass)
 #
+
+# Local
 gulp.task('compass:local', ->
   options = {
     compass: true   # enable Compass imports and load project file
@@ -22,13 +24,14 @@ gulp.task('compass:local', ->
     .pipe(gulp.dest(config.dest.local.css))
 )
 
-# gulp.task('compass:production', ->
-#   options = {
-#     compass: true
-#     force: true
-#     style: 'compressed'
-#   }
-#
-#   sass('app/src/app.sass', options)
-#     .pipe(gulp.dest('builds/production/css/app/src'))
-# )
+# Production
+gulp.task('compass:production', ->
+  options = {
+    compass: true
+    force: true
+    style: 'compressed'
+  }
+
+  sass(config.paths.sass_main, options)
+    .pipe(gulp.dest(config.dest.production.css))
+)

@@ -20,7 +20,6 @@ gulp.task('watch', ->
     config.paths.scripts
   ], ->
     runSequence(
-      #'ngClassify'
       [ 'coffee:local' ],
 
       -> console.log('\u2705  JS re-build complete')

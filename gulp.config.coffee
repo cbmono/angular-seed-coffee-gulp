@@ -1,4 +1,5 @@
 module.exports = {
+
   # Source paths/files
   paths: {
     gulpfile:   'gulpfile.coffee'
