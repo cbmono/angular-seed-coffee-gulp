@@ -14,22 +14,21 @@ watch = require('gulp-watch')
 gulp.task('watch', ->
 
   #
-  # Watch Coffee and HTML files
+  # Watch Coffee
   #
   gulp.watch([
     config.paths.scripts
-    config.paths.htmls
   ], ->
     runSequence(
       #'ngClassify'
       [ 'coffee:local' ],
 
-      -> console.log('\u2705  Re-build complete')
+      -> console.log('\u2705  JS re-build complete')
     )
   )
 
   #
-  # Watch only Coffeescript files
+  # Coffeelint
   #
   gulp.watch([
     config.paths.scripts
@@ -38,17 +37,32 @@ gulp.task('watch', ->
   , 6000))
 
   #
-  # Watch SASS files
+  # HTML's
   #
-  # gulp.watch([
-  #   'app/**/*.sass'
-  #   'app/**/*.html'
-  # ], ->
-  #   runSequence(
-  #     'compass:local'
-  #     'concat:local_css'
-  #     'clean:local_css'
-  #     'copy:local'
-  #   )
-  # )
+  gulp.watch([
+    config.paths.htmls
+    config.paths.images
+    config.paths.index
+  ], ->
+    runSequence(
+      'copy:local'
+      'rename:local:index'
+
+      -> console.log('\u2705  HTML re-build complete')
+    )
+  )
+
+  #
+  # SASS'
+  #
+  gulp.watch(_.flatten([
+    config.paths.sass
+    config.paths.sass_main
+  ], true), ->
+    runSequence(
+      'compass:local'
+
+      -> console.log('\u2705  CSS re-build complete')
+    )
+  )
 )

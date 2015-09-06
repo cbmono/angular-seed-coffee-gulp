@@ -24,8 +24,16 @@ gulp.task('build:local', (done) ->
     'compass:local',
     'concat:local_css_libs'
 
-    # index.html
-    # 'replace:local',
+    # Others
+    'rename:local:index'
+    # 'rename:local:robots'
+
+    # 'htmlmin',
+    # 'svgmin',
+    #
+    # 'compress',
+    # 'copy:gziped',
+    # 'clean:gziped'
 
     done
   )
@@ -34,3 +42,39 @@ gulp.task('build:local', (done) ->
     'coffeelint'
   )
 )
+
+#
+# Production
+#
+# gulp.task('build:production', (done) ->
+#   runSequence(
+#     # Remove old files and copy new ones
+#     'clean:production_files',
+#     'copy:production',
+#
+#     # Coffee & JS libs
+#     'concat:production_js_libs'
+#     # 'ngClassify',
+#     'coffee:production',
+#
+#     # Sass & CSS libs
+#     'compass:production',
+#     'concat:production_css_libs'
+#
+#     # Others
+#     # 'replace:local',
+#
+#     # 'htmlmin',
+#     # 'svgmin',
+#     #
+#     # 'compress',
+#     # 'copy:gziped',
+#     # 'clean:gziped'
+#
+#     done
+#   )
+#
+#   runSequence(
+#     'coffeelint'
+#   )
+# )

@@ -4,6 +4,7 @@
 open  = require('open')
 requireDir = require('require-dir')
 runSequence = require('run-sequence')
+config = require('./gulp.config')
 
 gulp = require('gulp')
 connect = require('gulp-connect')
@@ -25,22 +26,22 @@ tasks = requireDir('./gulp-tasks')
 # Create a local server
 gulp.task('connect', ->
   connect.server({
-    root: 'builds/local/'
+    root: config.dest.local.main
     port: 8000
   })
 )
 
 # Open default browser
-gulp.task('open:local', ->
+gulp.task('open', ->
   open('http://localhost:8000/')
 )
 
 # Launch app locally
 gulp.task('serve', ->
   runSequence(
-    #'build:local'
+    'build:local'
     'connect'
 
-    [ 'open:local' ] #, 'watch' ]   # This runs in parallel
+    [ 'open' , 'watch' ]   # This runs in parallel
   )
 )
