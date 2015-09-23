@@ -1,13 +1,29 @@
 'use strict'
 
-# Declare app level module which depends on views, and components
-angular
+# jQuery shortcut
+window.j$ = window.jQuery if window.jQuery
+
+#
+# Init global modules
+#
+window.myApp = {
+  Directives:   angular.module 'Directives', []
+  Controllers:  angular.module 'Controllers', []
+  Filters:      angular.module 'Filters', []
+  Services:     angular.module 'Services', []
+  Providers:    angular.module 'Providers', []
+}
+
+#
+# App Module and dependencies
+#
+window.myApp.App = angular
   .module('myApp', [
     'ngRoute'
-    'myApp.view1'
-    'myApp.view2'
-    'myApp.version'
-  ])
-  .config([ '$routeProvider', ($routeProvider) ->
-    $routeProvider.otherwise({ redirectTo: '/view1' })
+
+    'Directives'
+    'Controllers'
+    'Filters'
+    'Services'
+    'Providers'
   ])

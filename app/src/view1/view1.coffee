@@ -1,14 +1,7 @@
 'use strict'
 
-angular.module('myApp.view1', [ 'ngRoute' ])
-
-.config([ '$routeProvider', ($routeProvider) ->
-  $routeProvider.when('/view1', {
-    templateUrl: 'partials/view1/view1.html'
-    controller: 'View1Ctrl'
-  })
-])
-
-.controller('View1Ctrl', [ ->
-  # ...
-])
+angular.module('Controllers')
+  .controller('View1Ctrl', [ ->
+    console.log 'MONO'
+    # ...
+  ])

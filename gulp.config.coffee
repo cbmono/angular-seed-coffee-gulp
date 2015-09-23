@@ -13,6 +13,8 @@ module.exports = {
     ]
     sass_main:  'app/src/app.sass'
     scripts: [
+                'app/src/app.coffee'
+                'app/src/routes.coffee'
                 'app/src/**/*.coffee'
                 '!app/src/**/*.spec.coffee'
     ]
